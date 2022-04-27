@@ -1,5 +1,18 @@
 products = [
-    {'name': 'laptop', 'price': 800, 'quantity': 4},
-    {'name': 'mouse', 'price': 40, 'quantity': 10},
-    {'name': 'monitor', 'price': 400, 'quantity': 3}
+    {
+        "id": "1",
+        "merchant": "1",
+        "name": "Yellow T-shirt",
+        "description": "A yellow T-shirt with black font on the front.",
+        "price": "15.25",
+        "currency": "EUR",
+        "store": "C and A",
+        "shippingCosts": {
+            "HR": "12.00",
+            "DE": "5.00",
+            "MX": "20.00",
+            "PL": "10.00",
+            "US": "15.00"
+        }
+    }
 ]
