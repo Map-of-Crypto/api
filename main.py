@@ -4,6 +4,8 @@ app = Flask(__name__)
 
 from merchants import merchants
 from products import products
+from tracking import tracking
+from mockTracking import mockTracking
 
 # Get Data Routes
 @app.route('/merchants')
@@ -122,6 +124,24 @@ def deleteproduct(product_name):
             'message': 'product Deleted',
             'products': products
         })
+
+## Tracking
+
+@app.route('/tracking')
+def getTracking():
+    # return jsonify(merchants)
+    return jsonify({'tracking': tracking})
+
+## This might become a external adapter 
+# This function should return the list of all the producs that need funding
+# that means products that delivered = true and paid = false
+# Right now is just a mock
+
+@app.route('/trackingNeedFunding')
+def getFundingNeeded():
+    # return jsonify(merchants)
+    return jsonify({'mockTracking': mockTracking})
+
 
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 8080)))
