@@ -1,7 +1,7 @@
 tracking = [
     {
-        "productId":"1",
-        "paid":"false",
-        "status":"Delivered"
+        "trackingId":"12312ABC",
+        "status":"Delivered",
+        "purchaseId":"1"
     }
 ]

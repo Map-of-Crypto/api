@@ -30,6 +30,7 @@ def addmerchant():
         'name': request.json['name'],
         'lattitude': request.json['lattitude'],
         'longitude': request.json['longitude'],
+        'address': request.json['address'],
     }
     merchants.append(new_merchant)
     return jsonify({'merchants': merchants})
@@ -43,6 +44,7 @@ def editmerchant(merchant_name):
         merchantsFound[0]['name'] = request.json['name']
         merchantsFound[0]['lattitude'] = request.json['lattitude']
         merchantsFound[0]['longitude'] = request.json['longitude']
+        merchantsFound[0]['address'] = request.json['address']
         return jsonify({
             'message': 'merchant Updated',
             'merchant': merchantsFound[0]
