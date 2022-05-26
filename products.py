@@ -13,6 +13,7 @@ products = [
             "MX": "20.00",
             "PL": "10.00",
             "US": "15.00"
-        }
+        },
+        "img":"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS8Gn9euvXhB3Kg7596diY-HkJld64wkxIKJy3ESMNWerVboWS0"
     }
 ]

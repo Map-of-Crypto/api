@@ -1,6 +1,8 @@
 from flask import Flask, jsonify, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
 from merchants import merchants
 from products import products
@@ -92,6 +94,7 @@ def addproduct():
         'price': request.json['price'],
         'currency': request.json['currency'],
         'shippingCosts': request.json['shippingCosts'],
+        'img': request.json['img'],
     }
     products.append(new_product)
     return jsonify({'products': products})
